@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineChroma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+<div class="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-2xl text-center">
+  <h1 class="text-3xl font-bold mb-6">CineChroma</h1>
+
+  <div id="upload-area" class="border-2 border-dashed border-gray-600 rounded-lg p-6 mb-6 cursor-pointer hover:border-indigo-400 transition-colors">
+    <input type="file" id="poster-input" class="hidden" accept="image/*">
+    <p class="text-gray-400">Drag an image or <label for="poster-input" class="text-indigo-400 cursor-pointer">select a file</label>.</p>
+  </div>
+
+  <img id="poster-preview" src="#" alt="Poster Önizlemesi" class="hidden w-full max-h-96 object-contain rounded-lg mb-6">
+  <div id="change-image-container" class="hidden mb-6">
+    <button id="change-image-button" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full transition-colors">Change Image</button>
+  </div>
+
+  <div id="palette-container" class="hidden">
+    <h2 class="text-2xl font-semibold mb-4">Color Palette</h2>
+    <div id="color-palette" class="grid grid-cols-5 gap-4 mb-8">
+    </div>
+  </div>
+
+  <div id="similar-films-container" class="hidden">
+    <h2 class="text-2xl font-semibold mb-4">Movies With Similar Color Palette</h2>
+    <div id="similar-films" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/colorthief@2.3.2/dist/color-thief.umd.js"></script>
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
